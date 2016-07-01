@@ -4,6 +4,7 @@
 angular.module('monopofree', [
   'ngRoute',
   'monopofree.start',
+  'monopofree.connect',
   'monopofree.game',
   'monopofree.version'
 ]).

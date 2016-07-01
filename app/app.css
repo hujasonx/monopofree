@@ -28,3 +28,25 @@
   content: "";
   padding: 0;
 }
+
+.game {
+    height:40vw;
+    width:100vw;
+	background-color: silver;
+	box-sizing: border-box;
+}
+
+.player-list {
+}
+
+.status-bar {
+	position: absolute;
+	bottom: 0px;
+	font-size: 1.5rem;
+	width: 100%;
+	background-color: silver;
+}
+
+.overflow-scroll-y {
+	overflow-y: visible;
+}

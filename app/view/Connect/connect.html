@@ -1,0 +1,22 @@
+<div ng-if = "showConnectButtons">
+	<button class = "connect-establish-connection" ng-click = "establishConnection()">Establish Connection</button>
+	<button class = "connect-establish-connection" ng-click = "hostServer()">Host Server</button>
+
+	<div> {{ serverMessage }} </div>
+	<div> {{ clientMessage }} </div>
+</div>
+
+<div ng-if = "isClientConnected" class = "game">
+	<input type = 'text' class = 'input_name' value = "My Name"/>
+	<input type = 'color' class = 'input_color' value = '#eeeeee'/>
+	<button class = "button-set-info" ng-click = "clientTask('setInfo');">Update Info</button>
+
+	<div ng-if = "thisClient.location === 'lobby'" class = "game-header">LOBBY</div>
+	<div class = "player-list overflow-scroll-y" ng-repeat = "player in window.game.players">
+		<div ng-style="{color: player.details.color}">
+			{{ player.details.name }}
+		</div>
+	</div>
+</div>
+
+<div class = "status-bar"> {{ status }} </div>
